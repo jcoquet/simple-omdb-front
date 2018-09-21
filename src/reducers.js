@@ -2,7 +2,9 @@ import { combineReducers } from 'redux'
 import {
     GET_MOVIES,
     FETCHING,
-    MESSAGE
+    MESSAGE,
+    GET_MOVIE,
+    UNSET_MOVIE
 } from './actions'
 
 export function movies(state = {}, action) {
@@ -11,6 +13,17 @@ export function movies(state = {}, action) {
             return Object.assign({}, state, action.json.Search)
         case MESSAGE:
             return {}
+        default:
+            return state
+    }
+}
+
+export function movie(state = null, action) {
+    switch (action.type) {
+        case GET_MOVIE:
+            return Object.assign({}, state, action.json)
+        case UNSET_MOVIE:
+            return null
         default:
             return state
     }
@@ -31,7 +44,8 @@ export function ui(state = { isFetching: false, totalResults: 0, currentPage: 1,
 
 const omdbApp = combineReducers({
     movies,
-    ui
+    ui,
+    movie
 })
 
 export default omdbApp

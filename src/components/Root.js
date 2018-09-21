@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from './App';
 import Home from './Home';
+import Movie from './movie/Hoc'
 
 const Root = ({ store }) => (
     <Provider store={store}>
@@ -11,6 +12,7 @@ const Root = ({ store }) => (
             <App>
                 <Switch>
                     <Route exact path="/" component={Home} />
+                    <Route exact path="/:id" component={Movie} />
                 </Switch>
             </App>
         </Router>

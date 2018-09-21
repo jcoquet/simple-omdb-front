@@ -4,5 +4,6 @@ export const API_KEY = '596cff53';
 export const API_KEY_PARAM = 'apikey';
 export const API_SEARCH_PARAM = 's';
 export const API_PAGE_PARAM = 'page';
+export const API_ID_PARAM = 'i';
 export const MAX_BOOKMARKS = 3;
 export const PAGINATION_LIMIT = 10; // forced by the api

@@ -5,7 +5,7 @@ import {
     MESSAGE
 } from './actions'
 
-function movies(state = {}, action) {
+export function movies(state = {}, action) {
     switch (action.type) {
         case GET_MOVIES:
             return Object.assign({}, state, action.json.Search)

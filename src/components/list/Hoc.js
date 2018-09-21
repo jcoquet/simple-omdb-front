@@ -1,23 +1,22 @@
 import { connect } from 'react-redux'
 import View from './View'
-import { fetchMovies } from '../../actions'
+import {  } from '../../actions'
 
 const mapStateToProps = (state, ownProps) => {
     return {
+        movies: Object.values(state.movies),
+        message: state.ui.message
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchMovies: needle => {
-            dispatch(fetchMovies(needle));
-        }
     }
 }
 
-const SearchBox = connect(
+const List = connect(
     mapStateToProps,
     mapDispatchToProps
 )(View)
 
-export default SearchBox
+export default List

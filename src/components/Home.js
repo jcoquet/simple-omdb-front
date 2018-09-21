@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import SearchBox from './searchbox/Hoc';
 
 class Home extends Component {
 
     render() {
 
         return (
-            <span>Home...</span>
+            <SearchBox />
         )
     }
 }

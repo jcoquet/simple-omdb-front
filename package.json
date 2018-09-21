@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "lodash": "^4.17.11",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -15,7 +16,8 @@
   "devDependencies": {
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
-    "fetch-mock": "^7.0.0-alpha.6",
+    "fetch-mock": "^6.3.0",
+    "node-fetch": "^2.2.0",
     "react-scripts": "1.1.5",
     "redux-mock-store": "^1.5.3"
   },

@@ -25,9 +25,9 @@ export function fetchMovies(needle, page = 1) {
             .then(handleErrors)
             .then(response => response.json())
             .then(json => {
-                if (json.Response === 'True') { // j pars du principe que si dans la réponse json il y a { Response: "true" } alors il y a des résultats
+                if (json.Response === 'True') { // je pars du principe que si dans la réponse json il y a { Response: "true" } alors il y a des résultats
                     dispatch(getMovies(json, page, needle));
-                } else { // dans le cas contraire il doit s'gir d'un message d'erreur qui sera afficher
+                } else { // dans le cas contraire il doit s'agir d'un message d'erreur qui sera affiché
                     dispatch(message(json.Error));
                 }
             })

@@ -11,6 +11,12 @@ class View extends Component {
         
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
+        this.searchInput = React.createRef();
+    }
+
+    componentDidMount() {
+        this.searchInput.current.focus();
     }
     
     handleChange(event) {
@@ -32,7 +38,7 @@ class View extends Component {
         
         return (
             <form onSubmit={this.handleSubmit}>
-                <input type="text" placeholder="Movie title..." value={this.state.value} onChange={this.handleChange} />
+                <input ref={this.searchInput} type="text" placeholder="Movie title..." value={this.state.value} onChange={this.handleChange} />
                 <button type="submit">Search</button>
                 {this.state.error && <span>Ho please...</span>}
             </form>

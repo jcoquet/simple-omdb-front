@@ -1,3 +1,5 @@
+/* https://coolors.co/ebe9e9-f3f8f2-3581b8-fcb07e-dee2d6 */
+
 html,
 body {
     min-height: 100%;
@@ -198,4 +200,31 @@ body::after {
     .single .primary {
         width: auto;
     }
+}
+
+@keyframes rotating {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.loader {
+    position: fixed;
+    right: 10px;
+    bottom: -100px;
+    opacity: 0;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K') no-repeat center center;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    animation: rotating 2s linear infinite;
+    transition: opacity .2s, bottom .2s;
+}
+  
+.loader.true {
+    bottom: 10px;
+    opacity: 1;
 }

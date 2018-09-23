@@ -228,3 +228,19 @@ body::after {
     bottom: 10px;
     opacity: 1;
 }
+
+header a {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+}
+
+footer {
+    font-size: .8rem;
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+    z-index: 10;
+}

@@ -69,11 +69,7 @@ body::after {
 .searchbox button {
     line-height: 30px;
     padding: 0 10px;
-    background: #3581B8;
-    border: 0;
     border-radius: 0 4px 4px 0;
-    color: white;
-    cursor: pointer;
     transition: padding .2s;
 }
 
@@ -109,19 +105,34 @@ body::after {
     text-align: center;
 }
 
-.pager span {
+.primary {
+    padding: 10px;
+    background: #3581B8;
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Lobster', cursive;
+}
+
+.secondary {
     background-color: #FCB07E;
     color: #F3F8F2;
     padding: 10px;
     display: inline-block;
-    border-right: 1px solid #F3F8F2;
     cursor: pointer;
     transition: padding .2s;
+    border-radius: 4px;
 }
 
-.pager span:hover {
+.secondary:hover {
     padding: 10px 20px;
 }
+
+.pager span {
+    border-right: 1px solid #F3F8F2;
+}
+    
 
 .pager span:last-child {
     border-right: 0;
@@ -141,4 +152,50 @@ body::after {
 
 .pager .next:first-child {
     border-radius: 4px;
+}
+
+.single {
+    max-width: 600px;
+    margin: auto;
+}
+
+.single .wrap {
+    background: white;
+    padding: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.single img {
+    max-width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.single h1 {
+    color: #3581B8;
+    font-family: 'Lobster', cursive;
+}
+
+.single .primary {
+    width: 100%;
+    line-height: 40px;
+    font-size: 2rem;
+    transition: padding .2s;
+}
+
+.single .primary:hover {
+    padding: 10px 20px;
+}
+    
+
+@media screen and (min-width: 1024px) {
+    .single img {
+        float: left;
+        margin: 0 10px 10px 0;
+    }
+
+    .single .primary {
+        width: auto;
+    }
 }

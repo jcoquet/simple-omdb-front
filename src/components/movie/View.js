@@ -16,16 +16,29 @@ class View extends Component {
     const { movie, message } = this.props;
 
     return (
-      <div>
+      <div className="single">
 
         { message && <span>{message}</span> }
 
         { movie && 
           <div>
-            <a onClick={this.props.history.goBack}>Back</a>
-            <h1>{movie.Title}</h1>
-            <img src={movie.Poster}
-              alt={movie.Title} />
+            <a className="secondary" onClick={this.props.history.goBack}>Back</a>
+            <div className="wrap">
+              
+              <h1>{movie.Title}</h1>
+              
+              { movie.Poster !== 'N/A' &&
+              <img src={movie.Poster}
+                alt={movie.Title} />
+              }
+
+              { movie.Plot !== 'N/A' &&
+                <p>{movie.Plot}</p>
+              }
+
+              <button className="primary">Dayum !</button>
+
+              </div>
           </div>
         }
         

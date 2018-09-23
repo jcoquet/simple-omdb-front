@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from './App';
 import Home from './Home';
 import Movie from './movie/Hoc'
+import Bookmarks from './bookmarks/Hoc'
 
 const Root = ({ store }) => (
     <Provider store={store}>
@@ -12,6 +13,7 @@ const Root = ({ store }) => (
             <App>
                 <Switch>
                     <Route exact path="/" component={Home} />
+                    <Route path="/bookmarks" component={Bookmarks} />
                     <Route exact path="/:id" component={Movie} />
                 </Switch>
             </App>

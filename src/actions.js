@@ -16,6 +16,8 @@ export const FETCHING = "FETCHING";
 export const MESSAGE = "MESSAGE";
 export const GET_MOVIE = "GET_MOVIE";
 export const UNSET_MOVIE = "UNSET_MOVIE";
+export const BOOKMARK_ADD = "BOOKMARK_ADD";
+export const BOOKMARK_REMOVE = "BOOKMARK_REMOVE";
 
 /* Fetch movies */
 export function fetchMovies(needle, page = 1) {
@@ -37,7 +39,7 @@ export function fetchMovies(needle, page = 1) {
     }
 }
 
-/* GET_CHARACTERS action */
+/* GET_MOVIES action */
 // les paramètre term/page seront stockés dans store.ui pour la pagination
 export function getMovies(json, page, term) {
     return { type: GET_MOVIES, json, page, term };
@@ -87,4 +89,22 @@ export function fetching(isFetching = false) {
         type: FETCHING,
         isFetching
     };
+}
+
+/* Add a movie to the bookmarks
+movie : movie json to add */
+export function addBookmark(movie) {
+    return {
+        type: BOOKMARK_ADD,
+        movie
+    }
+}
+
+/* Remove from the bookmarks
+id : id of the movie to remove */
+export function removeBookmark(id) {
+    return {
+        type: BOOKMARK_REMOVE,
+        id
+    }
 }

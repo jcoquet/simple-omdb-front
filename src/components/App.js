@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Loader from './Loader';
 import { Link } from "react-router-dom";
+import BookmarkLink from './bookmarks/BookmarkLink';
 
 class App extends Component {
     render() {
@@ -8,6 +9,7 @@ class App extends Component {
             <div className="layout">
                 <header>
                     <Link to='/'>BlablaMovie</Link>
+                    <BookmarkLink />
                 </header>
                 {this.props.children && React.cloneElement(this.props.children)}
                 <footer>

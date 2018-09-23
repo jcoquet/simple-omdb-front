@@ -1,6 +1,6 @@
 import React from 'react'
 import Pager from '../pager/Hoc';
-import { Link } from "react-router-dom";
+import Movie from '../item/Hoc'
 
 const View = ({ movies, message }) => (
     <div>
@@ -8,11 +8,7 @@ const View = ({ movies, message }) => (
         
         <ul className="list">
             {movies.length > 0 && movies.map((movie, index) => (
-                <li key={index}>
-                    <Link to={`/${movie.imdbID}`}>
-                        {movie.Title}
-                    </Link>
-                </li>
+                <Movie key={index} movie={movie} />
             ))}
         </ul>
         

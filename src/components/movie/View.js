@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router';
+import Switch from '../bookmarks/Switch'
 
 class View extends Component {
 
@@ -36,7 +37,7 @@ class View extends Component {
                 <p>{movie.Plot}</p>
               }
 
-              <button className="primary">Dayum !</button>
+              <Switch movie={movie} />
 
               </div>
           </div>

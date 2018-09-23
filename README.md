@@ -18,3 +18,4 @@ yarn start
 
 * `/` searchbox + list
 * `/:id` show a movie by id
+* `/bookmarks`show the bookmarks list

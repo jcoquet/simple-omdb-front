@@ -6,7 +6,7 @@ const View = ({ movies, message }) => (
     <div>
         { message && <span>{message}</span> }
         
-        <ul>
+        <ul className="list">
             {movies.length > 0 && movies.map((movie, index) => (
                 <li key={index}>
                     <Link to={`/${movie.imdbID}`}>

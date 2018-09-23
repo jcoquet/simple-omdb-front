@@ -6,6 +6,8 @@ import { createLogger } from 'redux-logger'
 import { createStore, applyMiddleware } from 'redux';
 import omdbApp from './reducers';
 import Root from './components/Root';
+import '../node_modules/normalize.css'
+import './css/app.css';
 
 const loggerMiddleware = createLogger()
 

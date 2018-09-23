@@ -1,0 +1,144 @@
+html,
+body {
+    min-height: 100%;
+}
+
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+a {
+    color: rgb(20, 20, 20);    
+}
+
+body {
+    background: url('../assets/background.jpg') center center no-repeat;
+    background-size: cover;
+    padding: 22% 0;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(20, 20, 20);
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        padding: 10% 0;
+    }
+}
+
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    top: -140px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    height: 200px;
+    width: 200em;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+
+body::after {
+    bottom: -140px;
+    top: auto;
+}
+
+.layout {
+    padding: 0 10px;
+}
+
+.searchbox {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto 10px;
+    padding: 10px;
+    background-color: #DEE2D6;
+    border-radius: 4px;
+    max-width: 600px;
+}
+
+.searchbox input {
+    line-height: 30px;
+    padding: 0 10px;
+    border: 0;
+    border-radius: 4px 0 0 4px;
+    flex-grow: 2;
+}
+
+.searchbox button {
+    line-height: 30px;
+    padding: 0 10px;
+    background: #3581B8;
+    border: 0;
+    border-radius: 0 4px 4px 0;
+    color: white;
+    cursor: pointer;
+    transition: padding .2s;
+}
+
+.searchbox button:hover {
+    padding: 0 20px;
+}
+
+.list {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 0 auto 10px;
+    padding: 0;
+    list-style-type: none;
+    max-width: 600px;
+}
+
+.list a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 1px solid #DEE2D6;
+    transition: padding .2s;
+}
+
+.list a:hover {
+    padding: 10px 10px 10px 20px;
+}
+
+.list li:last-child a {
+    border: 0;
+}
+
+.pager {
+    text-align: center;
+}
+
+.pager span {
+    background-color: #FCB07E;
+    color: #F3F8F2;
+    padding: 10px;
+    display: inline-block;
+    border-right: 1px solid #F3F8F2;
+    cursor: pointer;
+    transition: padding .2s;
+}
+
+.pager span:hover {
+    padding: 10px 20px;
+}
+
+.pager span:last-child {
+    border-right: 0;
+}
+
+.pager .prev {
+    border-radius: 4px 0 0 4px;
+}
+
+.pager .prev:last-child {
+    border-radius: 4px;
+}
+
+.pager .next {
+    border-radius: 0 4px 4px 0;
+}
+
+.pager .next:first-child {
+    border-radius: 4px;
+}

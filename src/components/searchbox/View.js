@@ -37,7 +37,7 @@ class View extends Component {
     render() {
         
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form className="searchbox" onSubmit={this.handleSubmit}>
                 <input ref={this.searchInput} type="text" placeholder="Movie title..." value={this.state.value} onChange={this.handleChange} />
                 <button type="submit">Search</button>
                 {this.state.error && <span>Ho please...</span>}

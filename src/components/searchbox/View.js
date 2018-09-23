@@ -38,6 +38,7 @@ class View extends Component {
         
         return (
             <form className="searchbox" onSubmit={this.handleSubmit}>
+                <label>Vote for your three favorite movies:</label>
                 <input ref={this.searchInput} type="text" placeholder="Movie title..." value={this.state.value} onChange={this.handleChange} />
                 <button className="primary" type="submit">Search</button>
                 {this.state.error && <span>Ho please...</span>}

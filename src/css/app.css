@@ -53,11 +53,21 @@ body::after {
 .searchbox {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 0 auto 10px;
     padding: 10px;
     background-color: #DEE2D6;
     border-radius: 4px;
     max-width: 600px;
+}
+
+
+.searchbox label {
+    color: #FCB07E;
+    font-family: 'Lobster', cursive;
+    font-size: 1.5rem; 
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .searchbox input {

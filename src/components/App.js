@@ -13,7 +13,7 @@ class App extends Component {
                 </header>
                 {this.props.children && React.cloneElement(this.props.children)}
                 <footer>
-                    2018 - <a target="_blank" href="https://github.com/jcoquet/simple-omdb-front">Github</a>
+                    2018 - <a target="_blank" rel="noopener noreferrer" href="https://github.com/jcoquet/simple-omdb-front">Github</a>
                 </footer>
                 <Loader />
             </div>

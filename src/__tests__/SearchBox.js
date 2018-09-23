@@ -1,5 +1,5 @@
 import React from 'react'
-import Enzyme, { shallow } from 'enzyme'
+import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import View from '../components/searchbox/View'
 
@@ -13,7 +13,7 @@ beforeEach(() => {
 
 describe('<SearchBox />', () => {
     it('should show an error message depending on the state', () => {
-        const wrapper = shallow(<View />);
+        const wrapper = mount(<View />);
         expect(
             wrapper.containsMatchingElement(
                 <span>Ho please...</span>
@@ -29,7 +29,7 @@ describe('<SearchBox />', () => {
 
     it('should fetch only when the field is filled', () => {
         const inputTextValue = 'some title';
-        const wrapper = shallow(<View fetchMovies={fetchMovies} />);
+        const wrapper = mount(<View fetchMovies={fetchMovies} />);
 
         // initialy the error state is false
         expect(wrapper.state('error')).toBeFalsy();
